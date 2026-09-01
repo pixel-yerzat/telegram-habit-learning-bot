@@ -20,9 +20,6 @@ COPY . .
 # Ensure data directory exists for SQLite database storage
 RUN mkdir -p /app/data
 
-# Declare volume for persistent SQLite storage in Railway
-VOLUME ["/app/data"]
-
 # Set environment variables
 ENV NODE_ENV=production
 ENV DB_PATH=/app/data/bot.sqlite
