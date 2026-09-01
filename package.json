@@ -1,0 +1,32 @@
+{
+  "name": "habit-learning-telegram-bot",
+  "version": "1.0.0",
+  "description": "Telegram Bot for habit tracking, monthly challenges, learning checks, and weekly competency diagram analysis",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js",
+    "test": "node tests/test_db_and_analytics.js"
+  },
+  "keywords": [
+    "telegram",
+    "bot",
+    "habit-tracker",
+    "learning",
+    "competency-chart",
+    "sqlite"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "axios": "^1.20.0",
+    "better-sqlite3": "^13.0.3",
+    "dayjs": "^1.11.23",
+    "dotenv": "^17.4.2",
+    "node-cron": "^4.6.0",
+    "quickchart-js": "^4.0.0",
+    "telegraf": "^4.16.3"
+  }
+}
