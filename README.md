@@ -86,6 +86,23 @@ npm test
 
 ---
 
+## 🚂 Деплой на Railway (с Docker и постоянным диском)
+
+1. Зайдите на [Railway.app](https://railway.app) и нажмите **«New Project»** ➔ **«Deploy from GitHub repo»**.
+2. Выберите репозиторий `pixel-yerzat/telegram-habit-learning-bot`.
+3. В настройках сервиса в Railway добавьте **Variables (Переменные окружения)**:
+   - `BOT_TOKEN`: ваш токен Telegram-бота от [@BotFather](https://t.me/BotFather)
+   - `GEMINI_API_KEY`: ваш API-ключ от [Google AI Studio](https://aistudio.google.com/)
+   - `DEFAULT_TIMEZONE`: `+05:00`
+   - `DB_PATH`: `/app/data/bot.sqlite`
+4. Подключите постоянный диск (**Volume** для базы данных SQLite):
+   - Откройте вкладку **Settings** ➔ **Volumes** ➔ **Add Volume**.
+   - Укажите путь монтирования (**Mount Path**): `/app/data`.
+   *(Благодаря Volume база данных SQLite и весь прогресс не будут сбрасываться при перезапусках).*
+5. Railway автоматически соберет Docker-образ и запустит бота в режиме 24/7! 🚀
+
+---
+
 ## 📱 Команды бота
 
 | Команда | Описание |
