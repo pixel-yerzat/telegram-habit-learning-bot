@@ -1,5 +1,5 @@
-# Use official Node.js LTS image
-FROM node:20-slim AS base
+# Use official Node.js 22 LTS image (matches better-sqlite3 >= 22 engine requirement)
+FROM node:22-slim AS base
 
 # Install build dependencies for better-sqlite3 native bindings
 RUN apt-get update && apt-get install -y --no-install-recommends \
